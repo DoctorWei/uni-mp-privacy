@@ -1,5 +1,7 @@
 # uni-mp-privacy (uni-app小程序隐私保护指引授权弹窗组件)
 
+ 本文档讲述的隐私保护指引授权弹窗组件适用于uni-app小程序，[微信小程序原生开发版本请查看这里](https://developers.weixin.qq.com/community/develop/article/doc/00040cdf6981c8983240486316b413)
+
 微信发布[关于小程序隐私保护指引设置的公告](https://developers.weixin.qq.com/community/develop/doc/00042e3ef54940ce8520e38db61801)，为规范开发者的用户个人信息处理行为，保障用户的合法权益，自2023年9月15日起，对于涉及处理用户个人信息的小程序开发者，微信要求，仅当开发者主动向平台同步用户已阅读并同意了小程序的隐私保护指引等信息处理规则后，方可调用微信提供的隐私接口。
 
 [小程序用户隐私保护指引内容介绍](https://developers.weixin.qq.com/miniprogram/dev/framework/user-privacy/miniprogram-intro.html)里边所涉及到的隐私接口，都要做适配。
