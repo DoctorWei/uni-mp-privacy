@@ -67,8 +67,11 @@
     destroyed: function() {
       this.disagreeHandle()
     },
+    onPageShow() {
+      this.reading = false
+    },
     onPageHide() {
-      this.disagreeHandle()
+      if (!this.reading) this.disagreeHandle()
     },
     methods: {
       openContract() {
