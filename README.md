@@ -25,27 +25,25 @@
 
 4.1 配置文件 manifest.json （2023年9月15日前调试需要此步配置）
 ```json
-/* 小程序特有相关 */
 "mp-weixin" : {
     "libVersion": "2.32.3",
     "__usePrivacyCheck__": true,
-},
+}
 ```
 
 4.2 App.vue全局配置
 ```js
-  import store from '@/components/mp-privacy/store'
+  import mpstore from '@/components/mp-privacy/store'
 
   export default {
     onLaunch: function() {
-      console.log('App Launch')
 
       // 监听隐私接口需要用户授权事件
       if (wx.onNeedPrivacyAuthorization) {
         wx.onNeedPrivacyAuthorization(resolve => {
           // 需要用户同意隐私授权时，弹出开发者自定义的隐私授权弹窗
-          store.commit('setShowPrivacy', true)
-          store.commit('setResolvePrivacyAuthorization', resolve)
+          mpstore.commit('setShowPrivacy', true)
+          mpstore.commit('setResolvePrivacyAuthorization', resolve)
         })
       }
 
@@ -72,7 +70,7 @@
     "custom": {
       "mp-privacy": "@/components/mp-privacy/mp-privacy.vue"
     }
-  },
+  }
 ```
 
 4.4 组件使用
